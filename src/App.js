@@ -1,25 +1,44 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
 
-function App() {
+import DonutLargeIcon from '@material-ui/icons/DonutsLarge';
+import ChatIcon from '@material-ui/icons/ChatIcon';
+import MoreVert from '@material-ui/icons/MoreVert';
+
+// eslint-disable-next-line import/no-anonymous-default-export
+export default () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-window">
+      <div className="sidebar">
+
+        <header>
+          <img className="header--avatar" src="https://www.w3schools.com/howto/img_avatar2.png" alt=""/>
+            <div className="header--buttons">
+            <div className="header--btn">
+                <DonutLargeIcon styled={{collor: '#919191'}} />
+              </div>
+              <div className="header--btn">
+                <ChatIcon styled={{collor: '#919191'}} />
+              </div>
+              <div className="header--btn">
+                <MoreVert styled={{collor: '#919191'}} />
+              </div>
+            </div>
+
+        </header>
+
+        <div className="search">
+          ...
+        </div>
+
+        <div className="chatlist">
+          ...
+        </div>
+        
+      </div>
+      <div className="contentarea">
+        ...
+      </div>
     </div>
   );
 }
-
-export default App;
